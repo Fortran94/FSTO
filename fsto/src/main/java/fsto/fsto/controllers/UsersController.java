@@ -5,11 +5,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class BlogController {
+public class UsersController {
 
-    @GetMapping("/blog")
-    public String blogMain(Model model){
-        return "blogMain";
+    //Обработка перехода на home
+    @GetMapping("/users")
+    public String usersMain(Model model) {
+        return "users";
     }
-
 }

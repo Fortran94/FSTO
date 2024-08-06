@@ -125,18 +125,38 @@ a:hover {
 </head>
 
 <body>
-
 <header th:insert="blocks/header :: header"></header>
 
-<!-- HOME -->
+<!-- CARD -->
 <section class="main-content">
     <div class="container">
         <div class="row">
-            <div class="home">
+            <div class="user_card">
+
+
+
                 <div class="container text-center">
                     <div class="row align-items-start">
                         <div class="col">
-                            <h1>HOME</h1>
+                            <div class="foto">
+                                <img src="armyan.jpeg">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="user_details">
+                                <h3 class="fio">Иванов</h3>
+                                <h3 class="fio">Иван</h3>
+                                <h3 class="fio">Иванович</h3>
+                                <h4 class="age">Возраст: 18</h4>
+                                <h4 class="expierens">Стаж: 2.5</h4>
+                                <h4 class="activity_level">Коэфицент активности: 1</h4>
+                            </div>
+                        </div>
+
+
+                        <div class="col">
+                            Экипирован
                         </div>
                     </div>
                 </div>
@@ -144,9 +164,11 @@ a:hover {
         </div>
     </div>
 </section>
-<!-- HOME -->
+<!-- CARD -->
 
 <div th:insert="blocks/footer :: footer"></div>
+
+
 </body>
 </html>
 

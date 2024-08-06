@@ -14,11 +14,14 @@ public class MainController {
         return "home";
     }
 
-    @GetMapping("/about")
-    public String about(Model model) {
-        model.addAttribute("title", "Страница про нас");
-        return "about";
+    //Обработка перехода на users
+    @GetMapping("/games")
+    public String games(Model model) {
+        model.addAttribute("title", "Игры");
+        return "games";
     }
+
+
 
 
 
