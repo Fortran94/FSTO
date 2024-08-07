@@ -129,40 +129,20 @@ a:hover {
 
 <!-- CARD -->
 <section class="main-content">
-    <div class="container">
-        <div class="row">
-            <div class="user_card">
-
-
-
-                <div class="container text-center">
-                    <div class="row align-items-start">
-                        <div class="col">
-                            <div class="foto">
-                                <img src="armyan.jpeg">
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="user_details">
-                                <h3 class="fio">Иванов</h3>
-                                <h3 class="fio">Иван</h3>
-                                <h3 class="fio">Иванович</h3>
-                                <h4 class="age">Возраст: 18</h4>
-                                <h4 class="expierens">Стаж: 2.5</h4>
-                                <h4 class="activity_level">Коэфицент активности: 1</h4>
-                            </div>
-                        </div>
-
-
-                        <div class="col">
-                            Экипирован
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div th:each="el : ${users}" class="alert alert-info mt-2">
+        <h3 th:text="${el.name}"/>
+        <h3 th:text="${el.surname}"/>
+        <h4 th:text="${el.callSign}"/>
+        <h5 th:text="${el.phoneNumber}"/>
+        <h4 th:text="${el.age}"/>
+        <h5 th:text="${el.experience}"/>
+        <h5 th:text="${el.activityLevel}"/>
+        <!-- Дописать экиту и супера -->
     </div>
+
+
+
+
 </section>
 <!-- CARD -->
 
