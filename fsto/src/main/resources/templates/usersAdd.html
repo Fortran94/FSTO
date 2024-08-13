@@ -127,44 +127,24 @@ a:hover {
 <body>
 <header th:insert="blocks/header :: header"></header>
 
-<a class="p-2 text-dark" href="/users/add">Добавить участника</a>
+<!-- Добавление участника -->
+<div class="container mt-5 mb-5">
+<h1>Новый учатник</h1>
+    <form action="/users/add" method="post">
+        <input type="text" name="name" placeholder="Имя" class="form-control"><br>
+        <input type="text" name="surname" placeholder="Фамилия" class="form-control"><br>
+        <input type="text" name="callSign" placeholder="Позывной" class="form-control"><br>
+        <input type="text" name="age" placeholder="Возраст" class="form-control"><br>
+        <input type="text" name="phoneNumber" placeholder="Номер телефона" class="form-control"><br>
+        <input type="checkbox" name="equipment" id="equipment"><br>
+        <label for="equipment" style="color: white">Экипирован</label><br>
+        <input type="checkbox" name="superUser" id="superUser"><br>
+        <label for="superUser" style="color: white">Супердоступ</label><br>
+       <button type="submit" class="btn btn-success">Добавить учатника</button>
+    </form>
+</div>
+<!-- Добавление участника -->
 
-<!-- CARD -->
-<section class="main-content">
-    <div th:each="el : ${users}" class="alert alert-info mt-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-6">
-                    <a href="#"><img width="100" height="200" src="armyan.jpeg" alt="foto"/></a>
-                </div>
-
-                <div class="col-md-3 col-6">
-                    <h3 th:text="${el.name}"/>
-                    <h3 th:text="${el.surname}"/>
-                </div>
-
-                <div class="col-md-3 col-6">
-                    <h4 th:text="${el.callSign}"/>
-                    <h4 th:text="${el.phoneNumber}"/>
-                    <h4 th:text="${el.age}"/>
-                </div>
-
-                <div class="col-md-3 col-6">
-                    <h5 th:text="${el.experience}"/>
-                    <h5 th:text="${el.activityLevel}"/>
-                </div>
-            </div>
-            <a th:href="'/users/' + ${el.id}" class="btn btn-warning">Просмотреть</a>
-
-        </div>
-        <!-- Дописать экиту и супера -->
-    </div>
-
-
-
-
-</section>
-<!-- CARD -->
 
 <div th:insert="blocks/footer :: footer"></div>
 

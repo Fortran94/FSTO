@@ -13,7 +13,8 @@ public class User {
     private long id;
 
     private String name, surname,callSign;
-    private int age, experience, activityLevel, phoneNumber;
+    private int age, phoneNumber;
+    private double experience, activityLevel;
     private boolean equipment, superUser;
 
     public String getName() {
@@ -30,6 +31,19 @@ public class User {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public User() {
+    }
+
+    public User(String name, String surname, String callSign, int age, int phoneNumber, boolean equipment, boolean superUser) {
+        this.name = name;
+        this.surname = surname;
+        this.callSign = callSign;
+        this.age = age;
+        this.phoneNumber = phoneNumber;
+        this.equipment = equipment;
+        this.superUser = superUser;
     }
 
     public String getSurname() {
@@ -56,7 +70,7 @@ public class User {
         this.age = age;
     }
 
-    public int getExperience() {
+    public double getExperience() {
         return experience;
     }
 
@@ -64,7 +78,7 @@ public class User {
         this.experience = experience;
     }
 
-    public int getActivityLevel() {
+    public double getActivityLevel() {
         return activityLevel;
     }
 
