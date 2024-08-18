@@ -13,7 +13,7 @@ public class User {
     private long id;
 
     private String name, surname,callSign;
-    private int age, phoneNumber;
+    private int age, phoneNumber, games;
     private double experience, activityLevel;
     private boolean equipment, superUser;
 
@@ -108,5 +108,11 @@ public class User {
 
     public void setSuperUser(boolean superUser) {
         this.superUser = superUser;
+    }
+
+    //Метод расчитывает уровень актиности
+    public double activityLevel(double experience, int games){
+        activityLevel = games / experience;
+        return activityLevel;
     }
 }
